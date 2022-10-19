@@ -1,0 +1,42 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.hero {
+    background-image: url("../images/hero__backgroung.jpg");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 170px;
+        padding-bottom: 210px;
+    }
+    &__title {
+        max-width: 780px;
+        font-weight: 700;
+        font-size: 68px;
+        line-height: 75px;
+        margin-bottom: 28px;
+        color: $white;
+    }
+    &__descr {
+        max-width: 780px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: $white;
+        margin-bottom: 52px;
+    }
+    &__button {
+
+        &--sales {
+            @include button($white, none, $orange, 20px 40px);
+            margin-right: 32px;
+        }
+        &--audit {
+            @include button($white, 1px solid $white, rgba(255, 255, 255, 0.2), 20px 40px);
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.digital {
+    &__container {
+        padding-top: 120px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+        color: $typography;
+        margin-bottom: 60px;
+        span {
+            color: $orange;
+        }
+    }
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        @extend %list-reset;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 360px;
+        padding: 40px 32px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &--1 {
+            background-image: url("../images/digital_1.jpg");
+        }
+        &--2 {
+            background-image: url("../images/digital_2.jpg");
+        }
+        &--3 {
+            background-image: url("../images/digital_3.jpg");
+        }
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        color: $white;
+        margin-bottom: 28px;
+    }
+    &__service {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: $white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 1px solid rgba(255, 255, 255, .2);
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+        margin-bottom: 20px;
+    }
+    &__descr {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $white;
+        opacity: .5;
+        margin-bottom: 28px;
+    }
+    &__discount {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+        color: $white;
+        margin-bottom: 36px;
+        span {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    &__button {
+        @include button ($orange, 1px solid $orange, transparent, 16px 68px);
+    }
+}
