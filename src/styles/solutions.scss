@@ -30,6 +30,7 @@
     }
     &__content {
         display: flex;
+        height: 100%;
         flex-direction: column;
         align-items: center;
         padding-left: 24px;
@@ -37,16 +38,18 @@
         padding-bottom: 20px;
     }
     &__subtitle {
+        min-height: 50px;
         font-weight: 700;
         font-size: 18px;
         line-height: 25px;
-        letter-spacing: 1%;
+        letter-spacing: .01em;
         color: $typography;
         margin-bottom: 20px;
         text-align: center;
         text-transform: uppercase;
     }
     &__descr {
+        min-height: 100px;
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
