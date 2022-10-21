@@ -108,4 +108,18 @@
         line-height: 24px;
         color: $white;
     }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 16px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: $white;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        span, a {
+            opacity: .3;
+        }
+    }
 }

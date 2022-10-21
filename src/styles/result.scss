@@ -1,0 +1,58 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.result {
+    &__container {
+        padding-top: 120px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+        color: $typography;
+        margin-bottom: 36px;
+    }
+    &__postscript {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: $typography;
+        margin-bottom: 40px;
+    }
+    &__tabs {
+        display: flex;
+    }
+    &__tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 200px;
+        padding: 15px 35px;
+        background-color: $gray-light;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: $typography;
+        &:nth-child(2) {
+            background-color: $gray;
+            color: $white;
+        }
+    }
+    &__descr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $gray;
+        padding: 40px 275px;
+    }
+    &__description {
+        max-width: 650px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $white;
+    }
+}
