@@ -1,0 +1,72 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.searching {
+    background-image: url("../images/search_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+        color: $white;
+        margin-bottom: 40px;
+    }
+    &__descr {
+        max-width: 908px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: $white;
+        margin-bottom: 40px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px;
+        background-color: $gray-light;
+    }
+    &__input {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 0;
+        border-bottom: 1px solid rgba(51, 51, 51, .5); 
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: $gray;
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        &:last-child {
+            margin-bottom: 24px;
+        }
+    }
+    &__checking {
+        margin-bottom: 40px;
+    }
+    &__check {
+
+    }
+    &__label {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $typography;
+    }
+    &__button {
+        @include button($white, none, $orange, 20px 40px);
+    }
+}

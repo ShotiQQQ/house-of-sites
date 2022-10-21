@@ -1,0 +1,53 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.arming {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    &__left {
+        max-width: 360px;
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+        color: $typography;
+        margin-bottom: 56px;
+    }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 18px;
+    }
+    &__descr--left {
+        max-width: 360px;
+       font-weight: 500;
+       font-size: 16px;
+       line-height: 22px;
+       color: $typography;
+       opacity: .5; 
+       margin-right: 60px;
+    }
+    &__descr--right {
+        max-width: 350px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: $typography;
+    }
+    &__button {
+        @include button($white, none, $orange, 20px 40px);
+        align-self: flex-end;
+    }
+}
