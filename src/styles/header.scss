@@ -22,9 +22,31 @@
         line-height: 19px;
         color: $typography;
         margin-right: 40px;
+        &:hover {
+            color: $darkOrange;
+        }
+        &:active {
+            color: $gray-light;
+        }
+        &:focus-visible {
+            color: $orange;
+        }
     }
     &__button {
         @include button($orange, 1px solid $orange, transparent, 16px 28px);
+        &:hover {
+            color: $white;
+            background-color: $darkOrange;
+            border-color: $darkOrange;
+            span {
+                background-image: url("../images/phone-white.svg");
+                color: $white;
+            }
+        }
+        &:active {
+            background-color: $gray;
+            border-color: $gray;
+        }
         span {
             background-image: url("../images/phone.svg");
             background-repeat: no-repeat;
@@ -60,14 +82,41 @@
         line-height: 17px;
         letter-spacing: 0.01em;
         color: $typography;
+        &:hover {
+            color: $darkOrange;
+        }
+        &:active {
+            color: $gray-light;
+        }
+        &:focus-visible {
+            color: $orange;
+        }
     }
     &__search {
         @extend %btn-reset;
         width: 24px;
         height: 24px;
-        background-image: url("../images/search.svg");
-        background-repeat: no-repeat;
-        background-size: 24px 24px;
-        background-position: center center;
+        &:hover {
+            svg path {
+                stroke: $darkOrange;
+            }
+        }
+        &:active {
+            svg path {
+                stroke: $gray-light;
+            }
+        }
+        &:focus-visible {
+            svg path {
+                stroke: $orange;
+            }
+        }
+        svg {
+            width: 24px;
+            height: 24px;
+            path {
+                transition: stroke .3s;
+            }
+        }
     }
 }

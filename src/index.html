@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="main.css">
   <script defer src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <title>Дом сайтов</title>
 </head>
 <body>
@@ -62,7 +64,12 @@
           </a>
         </li>
       </ul>
-      <button class="header__search"></button>
+      <button class="header__search">
+        <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 21L16.65 16.65" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
   </header>
   <section class="hero">
@@ -392,6 +399,98 @@
         </div>
         <div class="clients__card">
           <img class="clients__logo" src="./images/585gold.png" alt="585 золотой">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="recall">
+    <div class="recall__container container">
+      <h2 class="recall__title">Отзывы наших клиентов</h2>
+      <div class="recall__content">
+        <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+          </div>
+        </div>
+        <button class="recall__button">Смотреть все отзывы</button>
+      </div>
+    </div>
+  </section>
+  <section class="start">
+    <div class="start__container container">
+      <h2 class="start__title">Как начать работать с нами</h2>
+      <div class="start__cards">
+        <div class="start__card">
+          <div class="start__buttons">
+            <button class="start__button start__button--active" data-path="first">Заявка</button>
+            <button class="start__button" data-path="second">Коммерческое предложение</button>
+            <button class="start__button" data-path="third">Начало работ</button>
+            <button class="start__button" data-path="fourth">Контроль качества</button>
+            <button class="start__button" data-path="fifth">Гарантированный результат</button>
+          </div>
+          <div data-target="first" class="start__descr start__descr--active start__descr--1">
+            <span class="start__text">Если Вы точно знаете, какие услуги необходимы для Вашего бизнеса, то:</span>
+            <ul class="start__list">
+              <li class="start__item">Заполните форму заявки на Коммерческое предложение - это займёт менее минуты;</li>
+              <li class="start__item">Мы подберём для Вас выгодное предложение и обсудим детали реализации;</li>
+              <li class="start__item">Либо просто позвоните нашему специалисту: +7 (4872) 79-29-10</li>
+              <li class="start__item">Мы предлагаем комплексный подход и разрабатываем уникальные стратегии для достижения целей Вашего бизнеса;</li>
+              <li class="start__item">Используем все инструменты digital-маркетинга для того, что добиться максимальных результатов;</li>
+              <li class="start__item">Предложим только результативные каналы продвижения Вашего бизнеса.</li>
+            </ul>
+          </div>
+          <div data-target="second" class="start__descr start__descr--2">
+            <span class="start__text">Если Вы точно знаете, какие услуги необходимы для Вашего бизнеса, то:</span>
+            <ul class="start__list">
+              <li class="start__item">Заполните форму заявки на Коммерческое предложение - это займёт менее минуты;</li>
+              <li class="start__item">Мы подберём для Вас выгодное предложение и обсудим детали реализации;</li>
+              <li class="start__item">Либо просто позвоните нашему специалисту: +7 (4872) 79-29-10</li>
+              <li class="start__item">Мы предлагаем комплексный подход и разрабатываем уникальные стратегии для достижения целей Вашего бизнеса;</li>
+              <li class="start__item">Используем все инструменты digital-маркетинга для того, что добиться максимальных результатов;</li>
+              <li class="start__item">Предложим только результативные каналы продвижения Вашего бизнеса.</li>
+            </ul>
+          </div>
+          <div data-target="third" class="start__descr start__descr--3">
+            <span class="start__text">Если Вы точно знаете, какие услуги необходимы для Вашего бизнеса, то:</span>
+            <ul class="start__list">
+              <li class="start__item">Заполните форму заявки на Коммерческое предложение - это займёт менее минуты;</li>
+              <li class="start__item">Мы подберём для Вас выгодное предложение и обсудим детали реализации;</li>
+              <li class="start__item">Либо просто позвоните нашему специалисту: +7 (4872) 79-29-10</li>
+              <li class="start__item">Мы предлагаем комплексный подход и разрабатываем уникальные стратегии для достижения целей Вашего бизнеса;</li>
+              <li class="start__item">Используем все инструменты digital-маркетинга для того, что добиться максимальных результатов;</li>
+              <li class="start__item">Предложим только результативные каналы продвижения Вашего бизнеса.</li>
+            </ul>
+          </div>
+          <div data-target="fourth" class="start__descr start__descr--4">
+            <span class="start__text">Если Вы точно знаете, какие услуги необходимы для Вашего бизнеса, то:</span>
+            <ul class="start__list">
+              <li class="start__item">Заполните форму заявки на Коммерческое предложение - это займёт менее минуты;</li>
+              <li class="start__item">Мы подберём для Вас выгодное предложение и обсудим детали реализации;</li>
+              <li class="start__item">Либо просто позвоните нашему специалисту: +7 (4872) 79-29-10</li>
+              <li class="start__item">Мы предлагаем комплексный подход и разрабатываем уникальные стратегии для достижения целей Вашего бизнеса;</li>
+              <li class="start__item">Используем все инструменты digital-маркетинга для того, что добиться максимальных результатов;</li>
+              <li class="start__item">Предложим только результативные каналы продвижения Вашего бизнеса.</li>
+            </ul>
+          </div>
+          <div data-target="fifth" class="start__descr start__descr--5">
+            <span class="start__text">Если Вы точно знаете, какие услуги необходимы для Вашего бизнеса, то:</span>
+            <ul class="start__list">
+              <li class="start__item">Заполните форму заявки на Коммерческое предложение - это займёт менее минуты;</li>
+              <li class="start__item">Мы подберём для Вас выгодное предложение и обсудим детали реализации;</li>
+              <li class="start__item">Либо просто позвоните нашему специалисту: +7 (4872) 79-29-10</li>
+              <li class="start__item">Мы предлагаем комплексный подход и разрабатываем уникальные стратегии для достижения целей Вашего бизнеса;</li>
+              <li class="start__item">Используем все инструменты digital-маркетинга для того, что добиться максимальных результатов;</li>
+              <li class="start__item">Предложим только результативные каналы продвижения Вашего бизнеса.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

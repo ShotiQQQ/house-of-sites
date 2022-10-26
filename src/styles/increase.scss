@@ -32,5 +32,15 @@
     &__button {
         @extend %btn-reset;
         @include button($white, none, $orange, 20px 40px);
+        &:hover {
+            background-color: $darkOrange;
+        }
+        &:active {
+            background-color: $gray;
+        }
+        &:focus-visible {
+            border: 0;
+            outline: 1px solid $typography;
+        }
     }
 }

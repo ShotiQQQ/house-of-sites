@@ -30,13 +30,31 @@
         margin-bottom: 52px;
     }
     &__button {
-
         &--sales {
             @include button($white, none, $orange, 20px 40px);
             margin-right: 32px;
+            &:hover {
+                background-color: $darkOrange;
+            }
+            &:active {
+                background-color: $gray;
+            }
+            &:focus-visible {
+                border: 0;
+                outline: 1px solid $typography;
+            }
         }
         &--audit {
             @include button($white, 1px solid $white, rgba(255, 255, 255, 0.2), 20px 40px);
+            &:hover {
+                color: $orange;
+                border-color: $orange;
+            }
+            &:active {
+                color: $white;
+                border-color: $gray;
+                background-color: $gray;
+            }
         }
     }
 }

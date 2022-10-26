@@ -1,0 +1,56 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.recall {
+    &__container {
+        padding-top: 56px;
+    }
+    &__content {
+        position: relative;
+        text-align: center;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 47px;
+        color: $typography;
+        margin-bottom: 56px;
+    }
+    .swiper-button-prev {
+        width: 56px;
+        height: 56px;
+        background-image: url("images/arrow-swiper.svg");
+        background-size: 56px 56px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin-left: -86px;
+        &::after {
+            content: '';
+        }
+    }
+    .swiper-button-next {
+        width: 56px;
+        height: 56px;
+        background-image: url("images/arrow-swiper.svg");
+        background-size: 56px 56px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+        margin-right: -86px;
+        &::after {
+            content: '';
+        }
+    }
+    .swiper {
+        margin-bottom: 50px;
+        .swiper-slide {
+            width: 360px;
+            height: 420px;
+            background-color: $gray-light;
+        }
+    }
+    &__button {
+        @include button($orange, 1px solid $orange, transparent, 16px 32px);
+        align-self: center;
+    }
+}

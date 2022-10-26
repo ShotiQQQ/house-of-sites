@@ -1,0 +1,89 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.start {
+    &__container {
+        padding-top: 120px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+        color: $typography;
+        margin-bottom: 60px;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        background-color: $gray-light;
+    }
+    &__button {
+        width: 25%;
+        @extend %btn-reset;
+        padding: 25px 55px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $typography;
+        text-align: center;
+        &:not(:last-child) {
+            border-right: 1px solid rgba(51, 51, 51, .2);
+        }
+    }
+    &__button--active {
+        background-color: $orange;
+        color: $white;
+    }
+    &__descr {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 40px;
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 1px solid rgba(51, 51, 51, .2);
+        &--active {
+            display: flex;
+        }
+        &--1 {
+            background-image: url("../images/iPhone13.png");
+            background-position: right 70px top 22px;
+        }
+        &--2 {
+            background-image: url("../images/commerc.png");
+        }
+        &--3 {
+            background-image: url("../images/start.png");
+        }
+        &--4 {
+            background-image: url("../images/control.png");
+        }
+        &--5 {
+            background-image: url("../images/garant.png");
+        }
+    }
+    &__text {
+        max-width: 684px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $typography;
+    }
+    &__list {
+        max-width: 684px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $typography;
+        margin: 0;
+        padding: 0;
+        padding-left: 25px;
+    }
+}

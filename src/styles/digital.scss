@@ -80,5 +80,13 @@
     }
     &__button {
         @include button ($orange, 1px solid $orange, transparent, 16px 68px);
+        &:hover {
+            color: $white;
+            background-color: $darkOrange;
+            border-color: $darkOrange;
+        }   
+        &:active {
+            background-color: $gray;
+        }
     }
 }

@@ -21,4 +21,8 @@
   color: $color;
   border: $border;
   background: $background;
+  transition: background-color .3s, color .3s, border-color .3s;
+  &:focus-visible {
+    border: 1px solid $typography;
+}
 }
