@@ -47,18 +47,22 @@
         font-size: 16px;
         line-height: 16px;
         color: $gray;
+        transition: outline .3s, border-color .3s;
         &:not(:last-child) {
             margin-bottom: 15px;
         }
         &:last-child {
             margin-bottom: 24px;
         }
+        &:hover {
+            border-color: $darkOrange;
+        }
+        &:focus-visible {
+            border-color: $darkOrange;
+        }
     }
     &__checking {
         margin-bottom: 40px;
-    }
-    &__check {
-
     }
     &__label {
         font-weight: 400;
@@ -68,5 +72,15 @@
     }
     &__button {
         @include button($white, none, $orange, 20px 40px);
+        &:hover {
+            background-color: $darkOrange;
+        }
+        &:active {
+            background-color: $gray;
+        }
+        &:focus-visible {
+            border: 0;
+            outline: 1px solid $typography;
+        }
     }
 }

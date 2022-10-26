@@ -16,13 +16,42 @@
         color: $typography;
         margin-bottom: 56px;
     }
+    .swiper-button-prev, .swiper-button-next {
+        border-radius: 100px;
+        svg path {
+            width: 56px;
+            height: 56px;
+            stroke: $gray;
+        }
+        &:hover {
+            svg  {
+                fill: $gray;
+                .path--2 {
+                    stroke: $white;
+                }
+                .path--3 {
+                    stroke: $white;
+                }
+            }
+        }
+        &:active {
+            svg  {
+                fill: transparent;
+                .path--2 {
+                    stroke: $gray;
+                }
+                .path--3 {
+                    stroke: $gray;
+                }
+            }
+        }
+        &:focus-visible {
+            outline: 1px solid $orange;
+        }
+    }
     .swiper-button-prev {
         width: 56px;
         height: 56px;
-        background-image: url("images/arrow-swiper.svg");
-        background-size: 56px 56px;
-        background-position: center center;
-        background-repeat: no-repeat;
         margin-left: -86px;
         &::after {
             content: '';
@@ -31,10 +60,6 @@
     .swiper-button-next {
         width: 56px;
         height: 56px;
-        background-image: url("images/arrow-swiper.svg");
-        background-size: 56px 56px;
-        background-position: center center;
-        background-repeat: no-repeat;
         transform: rotate(180deg);
         margin-right: -86px;
         &::after {
@@ -52,5 +77,14 @@
     &__button {
         @include button($orange, 1px solid $orange, transparent, 16px 32px);
         align-self: center;
+        &:hover {
+            color: $white;
+            background-color: $orange;
+        }
+        &:active {
+            color: $white;
+            border-color: $gray;
+            background-color: $gray;
+        }
     }
 }

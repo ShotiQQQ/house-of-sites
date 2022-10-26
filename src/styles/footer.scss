@@ -39,12 +39,34 @@
         line-height: 24px;
         color: $white;
         @extend %btn-reset;
+        transition: color .3s, border-color .3s;
+        &:hover {
+            color: $darkOrange; 
+            border-color: $darkOrange;
+        }
+        &:active {
+            color: $white;
+            border-color: $white;
+        }
+        &:focus-visible {
+            outline: 1px solid $orange;
+        }
     }
     &__telephone {
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
         color: $white;
+        transition: color .3s, border-color .3s;
+        &:hover {
+            color: $darkOrange; 
+        }
+        &:active {
+            color: $white;
+        }
+        &:focus-visible {
+            outline: 1px solid $orange;
+        }
     }
     &__adress {
         font-weight: 500;
@@ -68,6 +90,48 @@
     &__social {
         &:not(:last-child) {
             margin-right: 20px;
+        }
+    }
+    &__link {
+        svg {
+            path {
+                fill: $white;
+                transition: fill .3s;
+            }
+            rect {
+                fill: $white;
+                transition: fill .3s;
+            }
+        }
+        &:hover {
+            svg {
+                rect {
+                    fill: $darkOrange;
+                }
+                path {
+                    fill: $darkOrange;
+                }
+            }
+        }
+        &:active {
+            svg {
+                rect {
+                    fill: $white;
+                }
+                path {
+                    fill: $white;
+                }
+            }
+        }
+        &:focus-visible {
+            svg {
+                rect {
+                    fill: $darkOrange;
+                }
+                path {
+                    fill: $darkOrange;
+                }
+            }
         }
     }
     &__second {
@@ -107,6 +171,18 @@
         font-size: 14px;
         line-height: 24px;
         color: $white;
+        a {
+            transition: color .3s, border-color .3s;
+            &:hover {
+                color: $darkOrange; 
+            }
+            &:active {
+                color: $white;
+            }
+            &:focus-visible {
+                outline: 1px solid $orange;
+            }
+        }
     }
     &__bottom {
         display: flex;

@@ -31,8 +31,16 @@
         line-height: 20px;
         color: $typography;
         text-align: center;
+        transition: background-color .3s, color .3s, outline .3s;
         &:not(:last-child) {
             border-right: 1px solid rgba(51, 51, 51, .2);
+        }
+        &:hover {
+            background-color: $gray;
+            color: $white;
+        }
+        &:focus-visible {
+            outline: 1px solid $gray;
         }
     }
     &__button--active {
