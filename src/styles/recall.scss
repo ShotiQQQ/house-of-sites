@@ -15,6 +15,11 @@
         line-height: 47px;
         color: $typography;
         margin-bottom: 56px;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 32px;   
+        }
     }
     .swiper-button-prev, .swiper-button-next {
         border-radius: 100px;
@@ -48,6 +53,9 @@
         &:focus-visible {
             outline: 1px solid $orange;
         }
+        @media (max-width: 1375px) {
+            display: none;
+        }
     }
     .swiper-button-prev {
         width: 56px;
@@ -73,6 +81,18 @@
             height: 420px;
             background-color: $gray-light;
         }
+    }
+    .swiper-pagination {
+        display: none;
+        @media (max-width: 1375px) {
+            display: block;
+        }
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 70px;
+    }
+    .swiper-pagination-bullet-active {
+        background: $orange;
     }
     &__button {
         @include button($orange, 1px solid $orange, transparent, 16px 32px);

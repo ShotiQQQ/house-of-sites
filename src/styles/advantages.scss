@@ -4,6 +4,9 @@
 .advantages {
     &__container {
         padding-top: 120px;
+        @media (max-width: 768px) {
+            padding-top: 60px;  
+        }
     }
     &__title {
         font-weight: 700;
@@ -11,6 +14,11 @@
         line-height: 46px;
         color: $typography;
         margin-bottom: 60px;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 32px;    
+        }
     }
     &__cards {
         display: flex;

@@ -4,6 +4,9 @@
 .result {
     &__container {
         padding-top: 120px;
+        @media (max-width: 768px) {
+            padding-top: 60px;
+        }
     }
     &__title {
         font-weight: 700;
@@ -11,6 +14,11 @@
         line-height: 46px;
         color: $typography;
         margin-bottom: 36px;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 32px;
+        }
     }
     &__postscript {
         display: inline-block;
@@ -20,8 +28,28 @@
         color: $typography;
         margin-bottom: 40px;
     }
+    &__content {
+        @media (max-width: 1368px) {
+            display: flex;
+            flex-direction: row;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
     &__tabs {
         display: flex;
+        flex-wrap: wrap;
+        @media (max-width: 1368px) {
+            max-width: 200px;
+            flex-direction: column;
+        }
+        @media (max-width: 768px) {
+            max-width: 100%;
+            flex-direction: row;
+            min-width: auto;
+        }
+
     }
     &__tab {
         display: flex;
@@ -39,6 +67,9 @@
             background-color: $gray;
             color: $white;
         }
+        @media (max-width: 768px) {
+            min-width: 100%;
+        }
     }
     &__descr {
         display: flex;
@@ -46,6 +77,9 @@
         align-items: center;
         background-color: $gray;
         padding: 40px 275px;
+        @media (max-width: 1368px) {
+            padding: 40px;
+        }
     }
     &__description {
         max-width: 650px;

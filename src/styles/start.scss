@@ -4,6 +4,9 @@
 .start {
     &__container {
         padding-top: 120px;
+        @media (max-width: 768px) {
+            padding-top: 60px;
+        }
     }
     &__title {
         font-weight: 700;
@@ -11,16 +14,36 @@
         line-height: 46px;
         color: $typography;
         margin-bottom: 60px;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 32px;
+        }
+    }
+    &__cards {
+        display: flex;
     }
     &__card {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        @media (max-width: 1024px) {
+            flex-direction: row;
+        }
     }
     &__buttons {
         display: flex;
         justify-content: space-between;
         background-color: $gray-light;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+        @media (max-width: 768px) {
+            min-height: 100%;
+        }
+        @media (max-width: 450px) {
+            max-width: 33%;
+        }
     }
     &__button {
         width: 25%;
@@ -34,6 +57,9 @@
         transition: background-color .3s, color .3s, outline .3s;
         &:not(:last-child) {
             border-right: 1px solid rgba(51, 51, 51, .2);
+            @media (max-width: 1024px) {
+                border-right: 0;
+            }
         }
         &:hover {
             background-color: $gray;
@@ -41,6 +67,24 @@
         }
         &:focus-visible {
             outline: 1px solid $gray;
+        }
+        @media (max-width: 1190px) {
+            width: 20%;
+            padding: 20px 45px;
+        }
+        @media (max-width: 1024px) {
+            width: auto;
+            min-height: 100%;
+        }
+        @media (max-width: 768px) {
+            padding: 20px 20px;
+        }
+        @media (max-width: 650px) {
+            font-size: 12px;
+        }
+        @media (max-width: 450px) {
+            padding: 20px 5px;
+            font-size: 9px;
         }
     }
     &__button--active {
@@ -76,6 +120,16 @@
         &--5 {
             background-image: url("../images/garant.png");
         }
+        @media (max-width: 1190px) {
+            background-image: none;
+        }
+        @media (max-width: 1024px) {
+            min-height: 100%;
+            padding: 20px;
+        }
+        @media (max-width: 450px) {
+            padding: 20px 5px;
+        }
     }
     &__text {
         max-width: 684px;
@@ -83,6 +137,12 @@
         font-size: 14px;
         line-height: 20px;
         color: $typography;
+        @media (max-width: 1190px) {
+            max-width: 100%;
+        }
+        @media (max-width: 650px) {
+            font-size: 12px;
+        }
     }
     &__list {
         max-width: 684px;
@@ -93,5 +153,11 @@
         margin: 0;
         padding: 0;
         padding-left: 25px;
+        @media (max-width: 1190px) {
+            max-width: 100%;
+        }
+        @media (max-width: 650px) {
+            font-size: 12px;
+        }
     }
 }

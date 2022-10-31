@@ -4,18 +4,29 @@
 .solutions {
     &__container {
         padding-top: 120px;
+        @media (max-width: 768px) {
+            padding-top: 60px;  
+        }
     }
     &__title {
         font-weight: 700;
         font-size: 38px;
         line-height: 46px;
         margin-bottom: 60px;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 32px;
+        }
     }
     &__cards {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         row-gap: 40px;
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
     }
     &__card {
         max-width: 360px;
@@ -36,6 +47,10 @@
         padding-left: 24px;
         padding-right: 24px;
         padding-bottom: 20px;
+        @media (max-width: 450px) {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
     }
     &__subtitle {
         min-height: 50px;

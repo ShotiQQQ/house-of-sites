@@ -12,6 +12,10 @@
         align-items: center;
         padding-top: 120px;
         padding-bottom: 120px;
+        @media (max-width: 768px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
     }
     &__title {
         font-weight: 700;
@@ -19,6 +23,12 @@
         line-height: 46px;
         color: $white;
         margin-bottom: 40px;
+        text-align: center;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 32px;
+        }
     }
     &__descr {
         max-width: 908px;
@@ -35,6 +45,9 @@
         align-items: flex-start;
         padding: 60px;
         background-color: $gray-light;
+        @media (max-width: 768px) {
+            padding: 30px;
+        }
     }
     &__input {
         width: 100%;
@@ -69,6 +82,9 @@
         font-size: 16px;
         line-height: 20px;
         color: $typography;
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
     }
     &__button {
         @include button($white, none, $orange, 20px 40px);

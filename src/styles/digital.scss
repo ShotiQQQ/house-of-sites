@@ -4,6 +4,10 @@
 .digital {
     &__container {
         padding-top: 120px;
+        @media (max-width: 776px) {
+            padding-top: 60px;
+        }
+        
     }
     &__title {
         font-weight: 700;
@@ -11,6 +15,12 @@
         line-height: 46px;
         color: $typography;
         margin-bottom: 60px;
+        @media (max-width: 776px) {
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 32px;
+            max-width: 320px;
+        }
         span {
             color: $orange;
         }
@@ -18,7 +28,12 @@
     &__cards {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 24px;
         @extend %list-reset;
+        @media (max-width: 776px) {
+            justify-content: center;
+        }
     }
     &__card {
         display: flex;
@@ -30,6 +45,10 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        @media (max-width: 450px) {
+            padding: 20px 16px;
+            max-width: 100%;
+        }
         &--1 {
             background-image: url("../images/digital_1.jpg");
         }
@@ -46,6 +65,9 @@
         line-height: 25px;
         color: $white;
         margin-bottom: 28px;
+        @media (max-width: 450px) {
+            font-size: 16px;
+        }
     }
     &__service {
         font-weight: 500;
@@ -87,6 +109,9 @@
         }   
         &:active {
             background-color: $gray;
+        }
+        @media (max-width: 450px) {
+            padding: 12px 34px;
         }
     }
 }

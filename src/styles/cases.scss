@@ -4,6 +4,9 @@
 .cases {
     &__container {
         padding-top: 120px;
+        @media (max-width: 768px) {
+            padding-top: 60px;
+        }
     }
     &__title {
         font-weight: 700;
@@ -11,18 +14,26 @@
         line-height: 47px;
         color: $typography;
         margin-bottom: 60px;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 32px;
+        }
     }
     &__content {
         background-color: $gray-light;
         padding: 40px 50px 50px 50px;
         margin-bottom: 40px;
+        @media (max-width: 450px) {
+            padding: 20px;
+        }
     }
     &__subtitle {
         font-weight: 700;
         font-size: 18px;
         line-height: 25px;
         color: $typography;
-        letter-spacing: 1%;
+        letter-spacing: .01em;
         text-transform: uppercase;
         margin-bottom: 20px;
     }
@@ -36,10 +47,20 @@
     }
     &__down {
         display: flex;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
     &__left {
         padding-right: 30px;
         border-right: 1px solid rgba(51, 51, 51, .2);
+        @media (max-width: 768px) {
+            padding-right: 0;
+            padding-bottom: 12px;
+            border: 0;   
+            border-bottom: 1px solid rgba(51, 51, 51, .2);
+            margin-bottom: 12px;
+        }
     }
     &__goals {
         display: inline-block;
@@ -71,6 +92,9 @@
         flex-direction: column;
         align-items: flex-start;
         padding-left: 30px;
+        @media (max-width: 768px) {
+            padding-left: 0;   
+        }
     }
     &__results {
         display: inline-block;
@@ -85,7 +109,7 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
-        color: &typography;
+        color: $typography;
         margin-bottom: 13px;
     }
     &__result--1 {

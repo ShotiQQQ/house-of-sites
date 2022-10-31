@@ -4,6 +4,9 @@
 .clients {
     &__container {
         padding-top: 120px;
+        @media (max-width: 768px) {
+            padding-top: 60px;
+        }
     }
     &__title {
         font-weight: 700;
@@ -11,12 +14,20 @@
         line-height: 46px;
         color: $typography;
         margin-bottom: 60px;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 32px;
+        }
     }
     &__cards {
         display: flex;
         flex-wrap: wrap;
         row-gap: 30px;
         justify-content: space-between;
+        @media (max-width: 612px) {
+            justify-content: center;
+        }
     }
     &__card {
         width: 278px;

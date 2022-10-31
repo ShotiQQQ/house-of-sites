@@ -5,8 +5,8 @@
 @font-face {
   font-family: 'Montserrat';
   src: local("Montserrat-Regular"),
-    url("fonts/Montserrat-Regular.woff2") format("woff2"),
-    url("fonts/Montserrat-Regular.woff") format("woff");
+    url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 400;
@@ -15,8 +15,8 @@
 @font-face {
   font-family: 'Montserrat';
   src: local("Montserrat-Medium"),
-    url("fonts/Montserrat-Medium.woff2") format("woff2"),
-    url("fonts/Montserrat-Medium.woff") format("woff");
+    url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat-Medium.woff") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 500;
@@ -25,8 +25,8 @@
 @font-face {
   font-family: 'Montserrat';
   src: local("Montserrat-SemiBold"),
-    url("fonts/Montserrat-SemiBold.woff2") format("woff2"),
-    url("fonts/Montserrat-SemiBold.woff") format("woff");
+    url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-SemiBold.woff") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 600;
@@ -35,8 +35,8 @@
 @font-face {
   font-family: 'Montserrat';
   src: local("Montserrat-Bold"),
-    url("fonts/Montserrat-Bold.woff2") format("woff2"),
-    url("fonts/Montserrat-Bold.woff") format("woff");
+    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 700;
@@ -46,6 +46,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   min-width: 320px;
+  position: relative;
 }
 
 html {
@@ -82,5 +83,9 @@ img {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  @media (max-width: 450px) {
+    padding-left: 12px;
+    padding-right: 12px;
+}
 }
 

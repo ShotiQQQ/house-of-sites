@@ -19,4 +19,28 @@ const swiper = new Swiper('.swiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        320: {
+            slidesPerView: 1
+        },
+        450: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30
+      }
+    },
+    pagination: {
+        el: '.swiper-pagination',
+      },
 });
+
+const burger = document.querySelector('.header__burger');
+const menu = document.querySelector('.header__down');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('header__burger--active');
+    menu.classList.toggle('header__down--mobile');
+})

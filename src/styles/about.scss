@@ -6,9 +6,19 @@
         display: flex;
         justify-content: space-between;
         padding-top: 120px;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+        @media (max-width: 768px) {
+            padding-top: 60px;
+        }
     }
     &__left {
         padding-top: 58px;
+        @media (max-width: 1024px) {
+            margin-bottom: 24px;
+            padding-top: 0;
+        }
     }
     &__title {
         font-weight: 700;
@@ -16,6 +26,11 @@
         line-height: 47px;
         color: $typography;
         margin-bottom: 60px;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 32px;
+        }
     }
     &__descr {
         max-width: 628px;
@@ -23,8 +38,14 @@
         font-size: 16px;
         line-height: 22px;
         color: $typography;
+        @media (max-width: 1024px) {
+            max-width: 100%;
+        }
     }
     &__img {
         max-width: 420px;
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
     }
 }
